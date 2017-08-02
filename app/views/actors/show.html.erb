@@ -63,9 +63,10 @@
 
       <!-- Label and input for actor_id -->
       <div class="form-group">
-        <label for="actor_id" class="control-label">
-          Actor
-        </label>
+
+        <input type="hidden" name="actor_id" value="<%=@actor.id %>">
+
+      </div>
 
         <input type="hidden" id="actor_id" name="actor_id" placeholder="Actor" class="form-control" value="<%= @actor.name %>">
       </div>
