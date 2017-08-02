@@ -33,3 +33,9 @@
     </div>
   </div>
 </div>
+
+<ul>
+  <% Character.where(:actor_id => @actor.id).each do |character| %>
+    <li><%= Character.find_by(:id => character.actor_id).name %></li>
+    <% end %>
+</ul>
