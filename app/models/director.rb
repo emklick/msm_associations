@@ -30,6 +30,6 @@ validates :name, :presence => true, :uniqueness => { :scope => :dob }
 
 # What is the most recent movie in our list directed by Francis Ford Coppola?
 
-
+has_many(:movies, :class_name => "Movie", :foreign_key => "director_id")
     
 end

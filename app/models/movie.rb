@@ -50,5 +50,9 @@ validates :duration, :numericality => { :only_integer => true, :greater_than_or_
 
 # How many movies in our list have the word 'godfather' in their titles?
 # Movie.where(":title LIKE '%Godfather%'")
+
+belongs_to(:director, :class_name => "Director", :foreign_key => "director_id")
+
+has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
     
 end
