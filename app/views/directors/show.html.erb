@@ -17,6 +17,9 @@
 
       <dt>Bio</dt>
       <dd><%= @director.bio %></dd>
+      
+      <dt>Number of films directed</dt>
+      <dd><%= Movie.where(:director_id => @director.id).count %></dd>      
 
 
     </dl>
