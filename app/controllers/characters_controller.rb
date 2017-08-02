@@ -13,6 +13,8 @@ class CharactersController < ApplicationController
 
   def new
     @character = Character.new
+    
+    @character.save
 
     render("characters/new.html.erb")
   end
