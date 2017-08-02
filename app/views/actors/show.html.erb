@@ -16,6 +16,9 @@
 
       <dt>Bio</dt>
       <dd><%= @actor.bio %></dd>
+      
+      <dt>Character Count</dt>
+      <dd><%= Character.where(:actor_id => @actor.id).count %></dd>      
 
 
     </dl>
