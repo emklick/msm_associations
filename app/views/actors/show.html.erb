@@ -35,7 +35,7 @@
 </div>
 
 <ul>
-  <% Character.where(:actor_id => @actor.id).each do |character| %>
-    <li><%= Character.find_by(:id => character.actor_id).name %></li>
+  <% @actor.characters.each.each do |character| %>
+    <li><%= character.name %></li>
     <% end %>
 </ul>
