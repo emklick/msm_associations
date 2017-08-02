@@ -18,7 +18,7 @@
       <dt>Bio</dt>
       <dd><%= @director.bio %></dd>
       
-      <dt>Movies directed</dt>
+      <dt>Count of movies</dt>
       <dd><%= Movie.where(:director_id => @director.id).count %></dd> 
 
     </dl>
@@ -38,9 +38,9 @@
 </div>
 
 <ul>
-  <% @director.movie.each do |movie| %>
+  <% Movie.where(:director_id => @director.id).each do |movie| %>
     <li>
-      <%= director.movie.title %>
+      <%= Movie.find_by(:director_id => @director.id).title %>
     </li>
     <% end %>
 </ul>
