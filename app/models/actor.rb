@@ -20,5 +20,10 @@ validates :name, :presence => true, :uniqueness => { :scope => :dob }
 #  - bio: no rules
 #  - image_url: no rules     
 
+   has_many :characters
+   has_many :movies, :through => :characters    
+   
+has_many(:movies, :class_name => "Movies", :foreign_key => "actor_id")
+has_many(:character, :class_name => "characters", :foreign_key => "actor_id")   
     
 end
