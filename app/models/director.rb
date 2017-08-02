@@ -14,10 +14,22 @@
 class Director < ApplicationRecord
     
 # - name: must be present; must be unique in combination with dob
-
+validates :name, :presence => true, :uniqueness => { :scope => :dob }
 
 # - dob: no rules
 # - bio: no rules
-# - image_url: no rules    
+# - image_url: no rules   
+
+# Who directed Life Is Beautiful?
+# Movie.find_by(:title => "Life Is Beautiful")
+# m.director_id
+# Director.find_by(:id => m.director_id).name
+
+# How many movies in our list were directed by Francis Ford Coppola?
+# Director.find_by(:director_id => 2).count
+
+# What is the most recent movie in our list directed by Francis Ford Coppola?
+
+
     
 end

@@ -29,5 +29,26 @@ validates :duration, :numericality => { :only_integer => true, :greater_than_or_
 
 # - description: no rules
 # - image_url: no rules
+
+
+# In what year was the oldest movie in our list released?
+# Movie.minimum(:year)
+# Movie.order("year ASC").first
+
+
+# In what year was the most recent movie in our list released?
+# Movie.order("year DESC").first
+# Movie.order("year ASC").last
+
+# What is the duration of the shortest movie in our list?
+# Movie.minimum(:duration)
+# Movie.order("duration ASC").first
+
+# What is the longest movie in our list?
+# Movie.maximum(:duration)
+# Movie.order("duration DESC").first
+
+# How many movies in our list have the word 'godfather' in their titles?
+# Movie.where(":title LIKE '%Godfather%'")
     
 end
