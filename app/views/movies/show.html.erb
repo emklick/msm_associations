@@ -24,7 +24,7 @@
       <dt>Director/dt>
       <dd>
         <a href"/directors/<%= @movie.director_id %>">
-          <%= @movie.director.name %>
+          <%= @movie.director %>
         </a>
       </dd>
 
@@ -50,7 +50,7 @@
 <ul>
   <% @movie.characters.each do |character| %>
     <li>
-      <%= character.actor.name %> (<%= character.name%>)
+      <%= character.actor %> (<%= character.name%>)
     </li>
     <% end %>
 </ul>
@@ -89,3 +89,10 @@
       <button class="btn btn-success">
         Create Character
       </button>
+      
+     <div>
+      <a href="/director/new">Add new director</a>       
+    </div>     
+    </form>
+  </div>
+</div>
